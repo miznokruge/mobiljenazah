@@ -1,0 +1,56 @@
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 181px;
+  height: 181px;
+  margin:30px 0 50px 50px;
+  text-align: center;
+}
+.piechart-section .chart {
+  margin:30px 0 50px 50px;
+}
+.chart.first{ margin-left:0;}
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.percent {
+  display: inline-block;
+  line-height: 181px;
+  font-size:34px;
+  color:#6b6b6b;
+  z-index: 2;
+}
+.percent:after {
+  content: '%';
+  margin-left: 0.1em;
+  font-size: .8em;
+}
+.angular {
+  margin-top: 100px;
+}
+.angular .chart {
+  margin-top: 0;
+}
+@media only screen and (max-width: 600px) {
+  li {
+    font-size: 14.4px;
+  }
+}
+
+
+
+.piechart-section{ padding:90px 0;}
+
+.year {
+  bottom: -60px;
+  display: block;
+  font-size: 32px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+	  font-weight: 700;
+}

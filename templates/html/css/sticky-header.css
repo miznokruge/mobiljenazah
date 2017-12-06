@@ -1,0 +1,89 @@
+header{
+
+min-height: 108px;
+background: #fff;
+z-index: 6667;
+position: relative;
+
+// set animation
+-webkit-transition: all 0.4s ease;
+transition: all 0.4s ease;
+}
+
+header.sticky{
+position: fixed;
+min-height: 80px; 
+width: 100%;
+background: #fff;
+top:0px;
+padding: 0;
+z-index: 99997;
+border-bottom: solid 1px #F1F1F1;
+}
+
+header.sticky .logo img {    width: 170px;     margin: 22px 0 0 0;}
+header.sticky .nav{margin: 16px 0 0 0;}
+header.sticky .wtf-menu ul.submenu{padding-top: 24px;}
+
+
+
+
+
+
+
+.header2{
+
+min-height: 98px;
+background: #fff;
+z-index: 6667;
+position: relative;
+
+// set animation
+-webkit-transition: all 0.4s ease;
+transition: all 0.4s ease;
+}
+
+.header2.sticky{
+position: fixed;
+min-height: 76px; 
+width: 100%;
+background: #fff;
+top:0px;
+padding: 0;
+z-index: 99997;
+border-bottom: none;
+}
+
+.header2.sticky .logo{margin: 0 0 0 0;}
+.header2.sticky .logo img {    width: 170px;     margin: 22px 0 0 0;}
+.header2.sticky .nav{margin: 0 0 0 0;}
+.header2.sticky .wtf-menu ul.submenu{    padding-top: 0;    margin-top: -22px;}
+.header2.sticky .nav li.item-select { padding: 28px 0;}
+.header2.sticky .nav li:hover { background: #464C5B; border-radius: 0; padding: 28px 0;}
+.header2.sticky .nav li{padding: 28px 0;}		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#page header.sticky a{
+
+    top: 14px;
+    z-index: 99998;
+    left: -40px;
+
+}
+#page .header{ position: fixed;    z-index: 99998;}
+
+#page header.sticky{min-height: 75px; border-bottom:none;}
