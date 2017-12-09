@@ -179,6 +179,36 @@ CREATE  TABLE IF NOT EXISTS `review` (
   INDEX `fk_review_users1` (`user_id` ASC) )
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+
+-- Table `base_app`.`vehicle_terms`
+
+-- -----------------------------------------------------
+
+DROP TABLE IF EXISTS `base_app`.`vehicle_terms` ;
+
+CREATE  TABLE IF NOT EXISTS `base_app`.`vehicle_terms` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `name` VARCHAR(45) NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB;
+-- -----------------------------------------------------
+
+-- Table `base_app`.`vehicle_detail`
+
+-- -----------------------------------------------------
+
+DROP TABLE IF EXISTS `base_app`.`vehicle_detail` ;
+CREATE  TABLE IF NOT EXISTS `base_app`.`vehicle_detail` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `value` VARCHAR(45) NULL ,
+  `vehicle_terms_id` INT NOT NULL ,
+  `vehicle_id` INT NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_vehicle_detail_vehicle_terms1` (`vehicle_terms_id` ASC) ,
+  INDEX `fk_vehicle_detail_vehicle1` (`vehicle_id` ASC) )
+
+ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
