@@ -12,8 +12,7 @@ CREATE  TABLE IF NOT EXISTS `faqs` (
   `title` TEXT NOT NULL ,
   `body` TEXT NOT NULL ,
   `created` DATETIME NOT NULL ,
-  `deleted_date` DATETIME NOT NULL ,
-  `deleted` INT(11) NOT NULL DEFAULT '0' ,
+  `deleted_date` DATETIME DEFUALT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = MyISAM
 AUTO_INCREMENT = 6
@@ -32,8 +31,7 @@ CREATE  TABLE IF NOT EXISTS `user_groups` (
   `allowRegistration` INT(1) NOT NULL DEFAULT '1' ,
   `created` DATETIME NULL DEFAULT NULL ,
   `modified` DATETIME NULL DEFAULT NULL ,
-  `deleted_date` DATETIME NOT NULL ,
-  `deleted` INT(11) NOT NULL DEFAULT '0' ,
+  `deleted_date` DATETIME DEFUALT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
 AUTO_INCREMENT = 5
@@ -50,8 +48,7 @@ CREATE  TABLE IF NOT EXISTS `user_group_permissions` (
   `controller` VARCHAR(50) CHARACTER SET 'latin1' COLLATE 'latin1_general_ci' NOT NULL ,
   `action` VARCHAR(100) CHARACTER SET 'latin1' COLLATE 'latin1_general_ci' NOT NULL ,
   `allowed` TINYINT(1) UNSIGNED NOT NULL DEFAULT '1' ,
-  `deleted_date` DATETIME NOT NULL ,
-  `deleted` INT(11) NOT NULL DEFAULT '0' ,
+  `deleted_date` DATETIME DEFUALT NULL ,
   `user_groups_id` INT(11) NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_user_group_permissions_user_groups` (`user_groups_id` ASC) )
@@ -77,8 +74,7 @@ CREATE  TABLE IF NOT EXISTS `users` (
   `name` VARCHAR(200) NOT NULL ,
   `foto` VARCHAR(200) NOT NULL ,
   `description` TEXT NOT NULL ,
-  `deleted` INT(11) NOT NULL ,
-  `deleted_date` DATETIME NOT NULL ,
+  `deleted_date` DATETIME DEFUALT NULL ,
   `user_group_id` INT(11) NULL DEFAULT NULL ,
   `email_verified` TINYINT(3) NULL DEFAULT '0' ,
   `salt` VARCHAR(255) NULL DEFAULT NULL ,
